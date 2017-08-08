@@ -1,0 +1,17 @@
+blastdb_aliastool -gi_file_in euk_path_ngi.txt -gi_file_out euk_path_ngi.bin
+blastdb_aliastool.exe -db nt -dbtype nucl -out euk_path_nt -gilist euk_path_ngi.bin -title "Eukaryotic Pathogen NT Database"
+
+blastdb_aliastool -gi_file_in euk_path_pgi.txt -gi_file_out euk_path_pgi.bin
+blastdb_aliastool.exe -db nr -dbtype prot -out euk_path_nr -gilist euk_path_pgi.bin -title "Eukaryotic Pathogen NR Database"
+
+
+
+time blastn -task blastn -query arena.nt -db euk_path_nt -outfmt '6 qseqid pident nident qlen qstart qend sstart send gapopen gaps evalue score sallseqid staxids sscinames salltitles' -out arenant.blnt
+
+time blastp -query arena.fa -db euk_path_nr -outfmt '6 qseqid pident nident qlen qstart qend sstart send gapopen gaps evalue score sallseqid staxids sscinames salltitles' -out arenanr.blnr
+
+time blastp -query Arena_human.aa -db human_nr -max_target_seqs 10 -outfmt "6 qseqid qlen nident pident slen sallseqid salltitles" > human.dat
+
+
+
+time blastp -query Arena_celegans.aa -db celegans_nr -max_target_seqs 20 -outfmt '6 qseqid pident nident qlen qstart qend slen sstart send gapopen gaps evalue score sallseqid staxids sscinames salltitles' -out celegans.blnr

@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/Dtd/xhtml1-transitional.dtd"> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>Patient Summary</title> 
+<style type="text/css"> 
+.oneColFixCtrHdr #container {width: 660px;background: #FFF;     margin: 0 auto; text-align: left;} 
+.oneColFixCtrHdr #header {      padding: 0 10px 0 20px; background-color: #FFF;} 
+.oneColFixCtrHdr #header h1 {margin: 0; padding: 10px 0; background-color: #FFF; } 
+.oneColFixCtrHdr #mainContent { padding: 0 20px; background: #FFFFFF; } 
+.oneColFixCtrHdr #patientsummary_intro { padding: 0 px; background:#fff; margin-top: 20px;} 
+.oneColFixCtrHdr #patientsummary_footer p {     margin: 0;      padding: 10px 0; } 
+.body {font: 100% Georgia, Times New Roman, Times, serif;background: #666666;margin: 0;padding: 0;text-align: center;color: #000000;    background-color: #FFF;} 
+.break { page-break-before: always;} 
+.differential_columnhead1 {     font-size: 14px; font-weight: bolder; color: #0000F0; line-height: 16pt; text-align: left; width:480px; } 
+.differential_columnhead3 {     font-size: 14px; font-weight: bolder; color: #0000F0; line-height: 16pt; text-align: left; width: 105px; text-align: left;} 
+.differentialsectiontitle {     font-family: Georgia, "Times New Roman", Times, serif; color: #0000F0; font-size: 16px; font-weight: bold; margin: 0px; text-align: left; } 
+.disease {      margin-left: 15px; margin-bottom: 0px; margin-right: 0px; margin-top: 0px; font-size: 12px; line-height: 14pt; text-align: left; font-weight: normal; clear:both; border-color:#0000F0; border-width: 1px;} 
+.disease_right {font-family: Verdana, Geneva, sans-serif; font-size: 10px; text-align: right; line-height: 12pt; } 
+.disease_bar {  align: left; text-align: left;} 
+.findcolumn1 {text-align: left; font-weight: normal;  font-weight: bold; text-align: center; } 
+.findcolumn2 {text-align: center; font-weight: bold; color:#007F00;} 
+.findcolumn2RED {text-align: center; font-weight: bold; color:#CC0000;} 
+.findcolumn3 {text-align: left; font-weight: normal;} 
+.findcolumn4 {text-align: left; font-weight: normal;} 
+.findcolumnhead1 {font-weight: bolder; color: #007F00; line-height: 14pt; text-align: left;  width: 40px;} 
+.findcolumnhead2 {font-weight: bolder; color: #007F00; line-height: 14pt; text-align: center;  width: 60px;} 
+.findcolumnhead3 {font-weight: bolder; color: #007F00; line-height: 14pt; text-align: left;  width: 390px;} 
+.findcolumnhead4 {font-weight: bolder; color: #007F00; line-height: 14pt; text-align: left;  width: 105px;} 
+.finding_columnhead_variant1 {font-weight: bolder; color: #007F00; line-height: 14pt; text-align: left; width: 40px;} 
+.finding_columnhead_variant_blank {width: 60px;} 
+.finding_columnhead_variant2 {font-weight: bolder; color: #007F00; line-height: 14pt; text-align: left; width: 390px;} 
+.finding_columnhead_variant3 {font-weight: bolder; color: #007F00; line-height: 14pt; text-align: left; width: 105px;} 
+.findingsection {width: 600px; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 14px; font-weight: bolder; color: #007F00; margin: 0px; line-height: 14pt; text-align: left; } 
+.finding_section {text-align: left; font-weight: normal; } 
+.finding_sectionctrbold {text-align: left; font-weight: normal; text-align: center;} 
+.instructions {width: 600px; margin-bottom: 16px; margin-right: 0px; margin-top: 0px; font-size: 12px; line-height: 12pt; text-align: left; font-weight: normal;} 
+.linesingleblue { width: 600px; line-height: 8pt; border-bottom-style: solid; border-bottom-color: #0000F0;} 
+.linesingleblack { width: 600px; border-bottom-style: solid; line-height: 8pt; border-bottom-color: #000000;} 
+.linesinglegreen { width: 600px; border-bottom-style: solid; line-height: 8pt; border-bottom-color: #007F00;} 
+.orders_columnhead1 {font-family: Georgia, "Times New Roman", Times, serif; font-size: 12px; font-weight: bolder; color:  #060; line-height: 14pt; text-align: left; width: 9%;} 
+.orders_columnhead2 {font-family: Georgia, "Times New Roman", Times, serif; font-size: 12px; font-weight: bolder; color:  #060; line-height: 14pt; text-align: left; width: 91%;} 
+.orderscolumn1 {font-weight: bold;      text-align: center;} 
+.orderscolumn2 {margin-left: 15px; margin-bottom: 0px; margin-right: 0px; margin-top: 0px; font-size: 12px; line-height: 14pt; text-align: left; font-weight: normal; clear:both; border-color:#333; border-width: 1px;} 
+.patient{font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; font-weight: bold; text-align: left;} 
+.table_inner {float: left; text-align: left; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 12px; margin: 0px;} 
+.table_outer {width: 600px; margin: 0px;} 
+.table_plain {width: 600px; float: left; text-align: left; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 12px; margin: 0px;} 
+.top{padding: 0 px; background:#fff; margin-top: 20px;} 
+.topleft {float: left;} 
+.topright {float: right; margin-left: 0px; margin-bottom: 12px; font-size: 12px; line-height: 13pt; text-align: right; font-weight: normal; width: 300px; } 
+</style></head> 
+<body class="oneColFixCtrHdr"> 
+<div id="container"> 
+ <table width="100%"> 
+  <tr> 
+    <td class="topleft"><img src="http://www.simulconsult.com/images/logo_248.gif" width="248" alt="SimulConsult" longdesc="http://www.simulconsult.com" /></td> 
+  </tr> 
+</table> 
+<!--  URL http://www.SimulConsult.com/run/?d=3652&u=segal_120703192517&o=13&u=ftemp158&o=499999&u=ftemp195&o=399999&u=ftemp196&o=2919&u=ftemp227&o=b129&u=lyon_020130131534&o=13&u=ftemp234&o=59&u=ftemp243&o=729&u=ftemp253&o=b1641&u=rust_2000_2_26_17_51_15&o=1641&u=perlma_100913161242&o=399999&u=c0036572&o=499999&t2=0&t3=1&t4=1&t5=3&t9=1&t10=1&i=f&t=c-->
+  <div id="mainContent"> 
+  <br clearfloat:both />   
+     <div class="patient">Summary for a 10 year old girl with: </div> 
+     <div class="linesingleblack"></div><br> 
+    <div class="findingsection">Pertinent positive findings</div> 
+  <div class="linesinglegreen"></div>   
+  <div class="instructions">Onsets can be at an age, by an age, or unknown</div> 
+<table class="table_outer"> 
+  <td > 
+        <table class="table_inner"> 
+            <tr> 
+              <td class="findcolumnhead1">Req'd</td> 
+              <td class="findcolumnhead2">Onset</td> 
+              <td class="findcolumnhead3">Finding</td> 
+              <td class="findcolumnhead4">Pertinence</td>        
+            </tr> 
+            <tr> 
+              <td  class="findcolumn1"></td> 
+              <td  class="findcolumn2"><img src="http://www.simulconsult.com/images/Check.gif" width="14" height="14" alt="Present" /></td> 
+              <td  class="findcolumn3">CT or MRI: molar tooth sign on brain imaging</td> 
+              <td  class="findcolumn4"><img src="http://www.simulconsult.com/images/green1x14.gif" width="100" height="14" /></td> 
+            </tr> 
+            <tr> 
+              <td  class="findcolumn1"></td> 
+              <td  class="findcolumn2">&le;3y</td> 
+              <td  class="findcolumn3">Gait disturbance</td> 
+              <td  class="findcolumn4"><img src="http://www.simulconsult.com/images/green1x14.gif" width="90" height="14" /></td> 
+            </tr> 
+            <tr> 
+              <td  class="findcolumn1"></td> 
+              <td  class="findcolumn2">&le;3m</td> 
+              <td  class="findcolumn3">Eyes: ptosis</td> 
+              <td  class="findcolumn4"><img src="http://www.simulconsult.com/images/green1x14.gif" width="37" height="14" /></td> 
+            </tr> 
+            <tr> 
+              <td  class="findcolumn1"></td> 
+              <td  class="findcolumn2">@3y</td> 
+              <td  class="findcolumn3">Ataxia</td> 
+              <td  class="findcolumn4"><img src="http://www.simulconsult.com/images/green1x14.gif" width="30" height="14" /></td> 
+            </tr> 
+            <tr> 
+              <td  class="findcolumn1"></td> 
+              <td  class="findcolumn2">@1m</td> 
+              <td  class="findcolumn3">Hypotonia</td> 
+              <td  class="findcolumn4"><img src="http://www.simulconsult.com/images/green1x14.gif" width="14" height="14" /></td> 
+            </tr> 
+            <tr> 
+              <td  class="findcolumn1"></td> 
+              <td  class="findcolumn2">@1y</td> 
+              <td  class="findcolumn3">Motor developmental delay</td> 
+              <td  class="findcolumn4"><img src="http://www.simulconsult.com/images/green1x14.gif" width="12" height="14" /></td> 
+            </tr> 
+            <tr> 
+              <td  class="findcolumn1"></td> 
+              <td  class="findcolumn2"><img src="http://www.simulconsult.com/images/Check.gif" width="14" height="14" alt="Present" /></td> 
+              <td  class="findcolumn3">Intellectual disability</td> 
+              <td  class="findcolumn4"><img src="http://www.simulconsult.com/images/green1x14.gif" width="11" height="14" /></td> 
+            </tr> 
+            <tr> 
+              <td  class="findcolumn1"></td> 
+              <td  class="findcolumn2">@Bir</td> 
+              <td  class="findcolumn3">Eye movement deficit, horizontal</td> 
+              <td  class="findcolumn4"><img src="http://www.simulconsult.com/images/green1x14.gif" width="6" height="14" /></td> 
+            </tr> 
+            <tr> 
+              <td  class="findcolumn1"></td> 
+              <td  class="findcolumn2">@Bir</td> 
+              <td  class="findcolumn3">Breath holding</td> 
+              <td  class="findcolumn4"><img src="http://www.simulconsult.com/images/green1x14.gif" width="4" height="14" /></td> 
+            </tr> 
+            <tr> 
+              <td  class="findcolumn1"></td> 
+              <td  class="findcolumn2">@6y</td> 
+              <td  class="findcolumn3">Dysarthria or abnormal sound character</td> 
+              <td  class="findcolumn4"><img src="http://www.simulconsult.com/images/green1x14.gif" width="1" height="14" /></td> 
+            </tr> 
+            <tr> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+             <td style="font-family: Arial, Helvetica, sans-serif;      font-size: 12px; font-weight: bold;     color: #666666; text-align: right; font-style: italic;">high&#8594</td> 
+          </tr> 
+        </table>  </td> 
+    <td><img src="http://www.simulconsult.com/images/gray1x25.gif" width="1" height="234"  /></td> 
+  </table> 
+<clear:both /> 
+ <div class="findingsection">Pertinent negative findings</div> 
+  <div class="linesinglegreen"></div> 
+  <table class="table_outer"> 
+  <td > 
+        <table class="table_inner"> 
+            <tr> 
+              <td class="findcolumnhead1"></td> 
+              <td class="findcolumnhead2">Absent</td> 
+              <td class="findcolumnhead3">Finding</td> 
+              <td class="findcolumnhead4">Pertinence</td> 
+            </tr> 
+            <tr> 
+             <td  class="findcolumn1"></td> 
+              <td  class="findcolumn2RED">X</td> 
+              <td  class="findcolumn3">Seizures with abnormal movements</td>  
+              <td  class="findcolumn4"><img src="http://www.simulconsult.com/images/green1x14.gif" width="1" height="14" /></td> 
+            </tr> 
+            <tr> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+             <td style="font-family: Arial, Helvetica, sans-serif;      font-size: 12px; font-weight: bold;     color: #666666; text-align: right; font-style: italic;">high&#8594</td> 
+          </tr> 
+        </table>  </td> 
+    <td><img src="http://www.simulconsult.com/images/gray1x25.gif" width="1" height="72" /></td> 
+  </table> 
+<clear:both /> 
+<div class="findingsection">Family history</div> 
+  <div class="linesinglegreen"></div> 
+ <div class="instructions">Family history based on known clinical findings</div> 
+<table class="table_outer"> 
+<td > 
+  <table class="table_plain"> 
+    <tr><td class="findcolumn3">0 of 1 sisters affected<br>1 of 3 brothers affected<br>Mother not affected<br>Father not affected<br></td></tr> 
+  </table></td></table><br> 
+<clear:both /> 
+  <div class="differentialsectiontitle">Differential diagnosis</div> 
+    <div class="linesingleblue"></div> 
+<table class="table_outer"> 
+  <td > 
+        <table class="table_inner"> 
+          <tr> 
+            <td class="differential_columnhead1">Disease</td> 
+            <td class="differential_columnhead3">Probability</td> 
+          </tr> 
+          <tr> 
+            <td class="disease"><a target="_blank" href="http://www.ncbi.nlm.nih.gov/books/NBK1325/">JBTS27: Joubert syndrome, B9D1-related</a></td> 
+            <td class="differential_bar"><img src="http://www.simulconsult.com/images/blue1x14.gif" width="24" height="14" /></td> 
+          </tr> 
+          <tr> 
+            <td class="disease"><a target="_blank" href="http://www.ncbi.nlm.nih.gov/books/NBK1325/">JBTS28: Joubert syndrome, MKS1-related</a></td> 
+            <td class="differential_bar"><img src="http://www.simulconsult.com/images/blue1x14.gif" width="24" height="14" /></td> 
+          </tr> 
+          <tr> 
+            <td class="disease"><a target="_blank" href="http://www.ncbi.nlm.nih.gov/books/NBK1325/">JBTS26: Joubert syndrome, KIAA0556-related</a></td> 
+            <td class="differential_bar"><img src="http://www.simulconsult.com/images/blue1x14.gif" width="23" height="14" /></td> 
+          </tr> 
+          <tr> 
+            <td class="disease"><a target="_blank" href="http://www.ncbi.nlm.nih.gov/books/NBK1325/">JBTS25: Joubert syndrome, CEP104-related</a></td> 
+            <td class="differential_bar"><img src="http://www.simulconsult.com/images/blue1x14.gif" width="17" height="14" /></td> 
+          </tr> 
+          <tr> 
+            <td class="disease"><a target="_blank" href="http://www.ncbi.nlm.nih.gov/books/NBK1325/">JBTS1: Joubert syndrome, INPP5E-related</a></td> 
+            <td class="differential_bar"><img src="http://www.simulconsult.com/images/blue1x14.gif" width="12" height="14" /></td> 
+          </tr> 
+          <tr> 
+            <td class="disease"><a target="_blank" href="http://www.ncbi.nlm.nih.gov/books/NBK1180/">HSAN3: familial dysautonomia</a></td> 
+            <td class="differential_bar"><img src="http://www.simulconsult.com/images/blue1x14.gif" width="1" height="14" /></td> 
+          </tr> 
+          <tr> 
+            <td class="disease"><a target="_blank" href="http://omim.org/entry/206700">Gillespie aniridia, cerebellar ataxia and mental deficiency</a></td> 
+            <td class="differential_bar"><img src="http://www.simulconsult.com/images/blue1x14.gif" width="1" height="14" /></td> 
+          </tr> 
+          <tr> 
+            <td class="disease"><a target="_blank" href="http://www.ncbi.nlm.nih.gov/books/NBK1110/">CDG1A: PMM2-related</a></td> 
+            <td class="differential_bar"><img src="http://www.simulconsult.com/images/blue1x14.gif" width="1" height="14" /></td> 
+          </tr> 
+          <tr> 
+            <td class="disease"><a target="_blank" href="http://omim.org/entry/616204">SCAR18: Spinocerebellar ataxia, AR, GRID2-related</a></td> 
+            <td class="differential_bar"><img src="http://www.simulconsult.com/images/blue1x14.gif" width="1" height="14" /></td> 
+          </tr> 
+          <tr> 
+            <td class="disease"><a target="_blank" href="http://omim.org/entry/615009">MRD17: mental retardation, AD, PACS1-related</a></td> 
+            <td class="differential_bar"><img src="http://www.simulconsult.com/images/blue1x14.gif" width="1" height="14" /></td> 
+          </tr> 
+          <tr> 
+            <td>&nbsp;</td> 
+             <td style="font-family: Arial, Helvetica, sans-serif;      font-size: 12px; font-weight: bold;     color: #666666; text-align: right;font-style: italic;">100%&#8594</td> 
+          </tr> 
+                </table>  </td> 
+    <td><img src="http://www.simulconsult.com/images/gray1x25.gif" width="1" height="234" /></td> 
+  </table> 
+ <br clear:both /> 
+  <div class="findingsection">Most useful tests for this patient</div> 
+  <div class="linesinglegreen"></div> 
+  <div class="instructions">Top tests ranked by usefulness in narrowing the differential, taking into account cost and treatability</div> 
+        <table class="table_outer"> 
+          <tr> 
+            <th class="orders_columnhead1">Order</th> 
+            <th class="orders_columnhead2">Test</th> 
+          </tr> 
+          <tr> 
+            <td class="orderscolumn1">&#9744 </td> 
+            <td class="orderscolumn2">KIAA0556 gene variants (biallelic)</td> 
+          </tr> 
+          <tr> 
+            <td class="orderscolumn1">&#9744 </td> 
+            <td class="orderscolumn2">MKS1 gene variants (biallelic)</td> 
+          </tr> 
+          <tr> 
+            <td class="orderscolumn1">&#9744 </td> 
+            <td class="orderscolumn2">CEP104 gene variants (biallelic)</td> 
+          </tr> 
+          <tr> 
+            <td class="orderscolumn1">&#9744 </td> 
+            <td class="orderscolumn2">Hypothyroidism</td> 
+          </tr> 
+          <tr> 
+            <td class="orderscolumn1">&#9744 </td> 
+            <td class="orderscolumn2">B9D1 gene variants (biallelic)</td> 
+          </tr> 
+          </table> 
+    <clear:both /> 
+<br> 
+<div class="instructions">Generated by SimulConsult&reg; on 15 May 2017 14:29 using software of 15 May 2017 16:32 and database of 5 May 2017 14:29.<br> 
+Disease incidence was ignored. Onset was used.</div></div> 
+</div> 
+</body></html> 

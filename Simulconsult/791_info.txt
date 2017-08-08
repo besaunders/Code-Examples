@@ -1,0 +1,33 @@
+[1] "Family member info:"
+  external_id relation   GleesonID WES_id      Plate sex affected
+1  8480311934 ProbandF MTI-791-4-3   1958 Plate5_New   F        1
+2  1743996061   Mother MTI-791-3-2    189 Plate5_New   F        0
+3  4527277184   Father MTI-791-3-1    872 Plate5_New   M        0
+4  2845603037 BrotherA MTI-791-4-5    469      Pilot   M        1
+
+[1] "Variants in Proband: 50000"
+
+[1] "Potential denovo variants with AF < 0.005: 0"
+
+Database querying:
+   user  system elapsed 
+  1.064   0.024  19.230 
+
+[1] "Variants to get from VCF: 40696"
+[1] "Retrieving homozygoups WT info from VCF file"
+
+VCF retrieval and GT merge:
+    user   system  elapsed 
+1051.844    8.140 1088.492 
+
+[1] "363537 isoform rows"
+[1] "364630 variant source rows"
+[1] "151754 output rows"
+
+Annotations + Output:
+   user  system elapsed 
+ 10.724   0.188  17.097 
+
+Total:
+    user   system  elapsed 
+1063.632    8.352 1124.819 
